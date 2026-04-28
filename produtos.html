@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essenza | Produtos</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+     <header>
+        <h2>Essenza</h2>
+
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./produtos.html">Produtos</a>
+        </nav>
+    </header>
+    
+    <main id="main-produtos">
+        <h1>Produtos</h1>
+        <p class="subtitulo">Explore toda a nossa coleção.</p>
+
+        <div class="botoes">
+            <button class="tag-produtos">Todos</button>
+            <button class="tag-produtos">Acessórios</button>
+            <button class="tag-produtos">Calçados</button>
+            <button class="tag-produtos">Casa</button>
+        </div>
+
+        <div class="produtos">
+
+        </div>
+    </main>
+
+    <footer>
+        <h2>Essenza</h2>
+        <p>Produtos com design e qualidade para o seu dia a dia.</p>
+        <p class="copyright">&copy; 2026 Essenza. Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="module" src="./data.js"></script>
+    <script type="module">
+        import { produtos } from "./data.js";
+
+        const container = document.querySelector('.produtos');
+        for(let item of produtos){
+            container.innerHTML += `
+                <div class="card">
+                    <img src="${item.img}" alt="${item.nome}">
+                    <div class="detalhes">
+                        <div class="detalhes-textos">
+                            <p class="tag">${item.categoria}</p>
+                            <h3>${item.nome}</h3>
+                            <p class="descricao">${item.descricao}</p>
+                        </div>
+
+                        <div class="comprar">
+                            <p class="preço">R$${item.preco.toFixed(2)}</p>
+                            <button>Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+    </script>
+</body>
+</html>
