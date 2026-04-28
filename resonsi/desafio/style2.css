@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 1px solid double black;
+    width: 100%;
+    margin-top: 50px;
+}
+
+body{
+    font-family: cursive;
+}
+
+@media (min-width: 700px) {
+    .box {
+        background-color: black;
+        color: aliceblue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: black;
+    }
+}
