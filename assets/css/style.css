@@ -227,4 +227,25 @@ footer p:not(.copyright) {
     padding: 8px 10px;
     border-radius: 8px;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+}
+
+@media (max-width: 768px) {
+    #banner{
+        padding: 0 20px;
+    }
+
+    header{
+        padding: 20px 10px;
+    }
+
+    #destaques {
+        padding: 100px 10px;
+    }
+
+    #main-produtos {
+        padding: 50px 10px;
+    }
+>>>>>>> main
 }
